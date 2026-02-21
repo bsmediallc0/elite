@@ -1,4 +1,5 @@
 "use client";
+import MobileActionMenu from "@/components/MobileActionMenu";
 import { supabase } from "../lib/supabase"; // Supabase eklendi
 import RoofCalculator from "../components/RoofCalculator";
 import FloatingWidget from "../components/FloatingWidget";
@@ -231,6 +232,7 @@ export default function Home() {
       <FAQ />
       <CallToAction />
       <FloatingWidget />
+      <MobileActionMenu />
       <Footer />
     </>
   );
