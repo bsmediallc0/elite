@@ -48,7 +48,8 @@ export default function FloatingWidget() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4">
+    // SADECE BURAYA max-md:hidden EKLENDİ. Mobilde gizler, PC'de orijinal halini gram bozmaz.
+    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4 max-md:hidden">
       
       {/* PANELLER (MODAL YAPISI) */}
       <AnimatePresence>
