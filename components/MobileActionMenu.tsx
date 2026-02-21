@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, MessageSquare, Mail, Plus } from "lucide-react";
+import { Calendar, MessageSquare, Mail, Plus, Phone } from "lucide-react";
 
 export default function MobileActionMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +23,16 @@ export default function MobileActionMenu() {
             transition={{ duration: 0.2 }}
             className="flex flex-col gap-3"
           >
-            {/* BOOK BUTONU */}
-            <a href="#book-now" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
+            {/* CALL BUTONU */}
+            <a href="tel:12543660315" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
+              <span className="text-[10px] font-black uppercase tracking-widest">Call</span>
+              <div className="bg-[#b91c1c] p-3 rounded-full text-white">
+                <Phone size={16} />
+              </div>
+            </a>
+
+            {/* BOOK BUTONU (Direkt CallToAction bölümüne kaydırır) */}
+            <a href="#CallToAction" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
               <span className="text-[10px] font-black uppercase tracking-widest">Book</span>
               <div className="bg-[#b91c1c] p-3 rounded-full text-white">
                 <Calendar size={16} />
@@ -32,7 +40,7 @@ export default function MobileActionMenu() {
             </a>
 
             {/* TEXT BUTONU */}
-            <a href="sms:+1234567890" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
+            <a href="sms:12543660315" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
               <span className="text-[10px] font-black uppercase tracking-widest">Text</span>
               <div className="bg-[#b91c1c] p-3 rounded-full text-white">
                 <MessageSquare size={16} />
@@ -40,7 +48,7 @@ export default function MobileActionMenu() {
             </a>
 
             {/* EMAIL BUTONU */}
-            <a href="mailto:info@bsroofing.com" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
+            <a href="mailto:info@bsroofsystem.com" onClick={closeMenu} className="flex items-center gap-3 bg-[#0a0a0a] border border-white/10 text-white pl-5 pr-2 py-2 rounded-full shadow-xl">
               <span className="text-[10px] font-black uppercase tracking-widest">Email</span>
               <div className="bg-[#b91c1c] p-3 rounded-full text-white">
                 <Mail size={16} />
