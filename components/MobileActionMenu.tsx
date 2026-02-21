@@ -10,8 +10,8 @@ export default function MobileActionMenu() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    // md:hidden diyerek sadece telefonda (küçük ekranda) görünmesini sağlıyoruz
-    <div className="md:hidden fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    // İŞTE BURASI DÜZELDİ: "hidden max-md:flex" sayesinde PC'de %100 gizlenir, mobilde çalışır!
+    <div className="fixed bottom-6 right-6 z-50 flex-col items-end gap-3 hidden max-md:flex">
       
       {/* Yukarı Doğru Açılan Seçenekler */}
       <AnimatePresence>

@@ -6,7 +6,8 @@ import Image from "next/image";
 
 export default function CallToAction() {
   return (
-    <section className="relative py-24 px-6 overflow-hidden">
+    // İŞTE BURAYA id="CallToAction" EKLENDİ!
+    <section id="CallToAction" className="relative py-24 px-6 overflow-hidden">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
